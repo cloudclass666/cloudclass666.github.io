@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>请先输入验证码哦 - 云课堂网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style>
+
+.flex {
+    display: -ms-flexbox;
+    display: flex;
+    text-align: initial;
+    margin-left: -.6em;
+    width: calc(100% + .6em);
+    flex-wrap: wrap;
+    transition: all .3s ease
+}
+
+.flex>* {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    padding-left: .6em;
+    padding-bottom: .6em
+}
+.two>* {
+    width: 50%
+}
+
+body {
+    padding: 0;
+    align-items: center;
+    font:16px/1.6 Helvetica Neue,PingFang SC,Source Han Sans SC,Source Han Sans CN,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    background-color: #f4f4f4 ;
+    background-image:url(whaaaat.jpg);
+    background-repeat:no-repeat cover;
+    background-size: cover;
+    background-position: center right;
+}
+
+body,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}h2,h3{color:#13c2c2;font-weight:400}a{color:#428bca;text-decoration:none}a:hover{text-decoration:underline}
+
+.warpper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    max-width: 32em;
+    padding: 1em;
+    margin: auto;
+    text-align: center;
+    color: #333;
+    background: #fff;
+    border-radius: 0.6em;
+    box-shadow: 0 0.1em 0.15em -0.1em rgba(0,0,0,0.15), 0 0.2em 0.25em -0.05em rgba(0,0,0,0.1), 0 0.3em 0.3em rgba(0,0,0,0.05);
+}
+
+footer {
+    font-size: 0.8em;
+    opacity: 0.4;
+}
+        </style>
+    </head>
+    <body>
+        <main class="warpper">
+        <div class="container">
+<h2>请先输入验证码哦</h2>
+::CAPTCHA_BOX::
+<div class="flex two">
+<div>
+<h3>为什么要验证码？</h3>
+<p>当前可能有大量机器人访问，我们需要证明您是聪明的人类~</p>
+</div>
+<div>
+<h3>为什么输入验证码无效？</h3>
+<p>可能您的验证码错误了吧，注意大小写试试看！</p>
+</div>
+</div>
+            </div>
+</main>
+    </body>
+</html>
