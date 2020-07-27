@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <title>似乎无法为您服务 | 咕咕学</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box!important;
+}
+
+body,
+button {
+    color: unset;
+    font: unset;
+    font-family: sans-serif;
+}
+
+#background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #00c6fb;
+    background: linear-gradient(to right,#00c6fb,#005bea);
+    z-index: 10;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.overlay-panel p {
+    margin: 20px 0 30px;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 600px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.details-container {
+    top: 0;
+    min-width: 50%;
+    height: 100%;
+    transition: all .6s ease-in-out;
+    order: 2;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+.details-container > .inner {
+    max-height: 100%;
+}
+
+.overlay-container {
+    left: 0;
+    top: 0;
+    min-width: 50%;
+    height: 100%;
+    z-index: 100;
+    transition: transform .6s ease-in-out;
+    overflow: hidden;
+    order: 1;
+}
+
+.overlay {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#ff4b2b,#ff416c) no-repeat 0 0/cover;
+    color: #fff;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-panel {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rocket {
+    position: absolute;
+    left: 50%;
+    top: 10vh;
+    width: 10em;
+    height: auto;
+    transform: scaleX(-1) translateX(50%);
+    opacity: 0.25;
+}
+
+.rocket svg {
+    fill: white;
+}
+
+footer {
+    border-top: 1px solid rgba(0,0,0,0.5);
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    opacity: 0.5;
+}
+footer ul {
+    list-style: none;
+    padding:0;
+}
+
+.overlay-panel .hint {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 2.5vh;
+    opacity: 0.8;
+}
+
+
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+        position: initial;
+        left: initial;
+        top: initial;
+        transform: initial;
+        border-radius: 0;
+        max-height: unset;
+    }
+}
+
+</style>
+<body id="error-page">
+    <main id="background">
+        <div class="container" id="container">
+            <div class="details-container">
+                <div class="inner">
+                    <h3>Oops!!您或许在国外也或许在梯子上，请在大陆或其他允许的地区使用哦！</h3>
+                    <p>::CLOUDFLARE_ERROR_1000S_BOX::</p>
+                    <footer>
+                        <ul>
+                            <li>服务事件ID: <code>::RAY_ID::</code></li>
+                            <li>你的IP: <code>::CLIENT_IP::</code></li>
+                        </ul>
+                        <p>Powered by NurlGroup Tech DPM.</p>
+                    </footer>
+                </div>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="rocket">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                            <g><path d="M309.4,168.5c0-82.7-67-149.7-149.7-149.7S10,85.8,10,168.5c0,82.7,67,149.7,149.7,149.7S309.4,251.2,309.4,168.5L309.4,168.5z M840.3,18.8c-82.7,0-149.7,67-149.7,149.7c0,82.7,67,149.7,149.7,149.7c82.7,0,149.7-67,149.7-149.7C990,85.8,923,18.8,840.3,18.8L840.3,18.8z M813.1,794.6c0,0-133.7-95.3-314.2-95.3c-174.3,0-311.9,95.3-311.9,95.3c-39.4,28-72.2,59-81.7,81.7c-9.4,22.6-6.2,63.7,13.6,81.7c19.8,17.9,43.7,25.9,74.9,13.6c31.2-12.3,117.5-108.9,305.1-108.9c178.8,0,314.2,108.9,314.2,108.9c29.1,13.9,53.4,15.7,81.7-13.6c30.9-32.1,12.9-78.9,0-95.3C879.6,843.4,852.3,821.9,813.1,794.6L813.1,794.6L813.1,794.6z"/></g>
+                            </svg>
+                    </div>
+                    <div class="overlay-panel">
+                        <p class="hint">咕咕学提醒您</p>
+                        <h1>这个区域还没有提供服务</h1>
+                        <p>没法为您服务吖ο(=•ω＜=)ρ⌒☆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
